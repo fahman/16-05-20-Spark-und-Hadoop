@@ -20,7 +20,7 @@ object WasSindRDDs extends App {
   )
 
   // setting up spark
-  val sparkConfig = new SparkConf().setAppName("SparkAtGoldschmiede").setMaster("local[8]")
+  val sparkConfig = new SparkConf().setAppName("SparkAtGoldschmiede").setMaster("local[*]")
   val sc = new SparkContext(sparkConfig)
 
   /** immutability **/

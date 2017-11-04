@@ -9,12 +9,12 @@ import org.apache.spark.{SparkContext, SparkConf}
   * Based on sql data, this example attempts to find similar countries.
   * Question is - on what is the similarity based on?
   */
-object AehlicheLaender extends App {
+object AehnlicheLaender extends App {
   // we will use configuration to read sql url from config file
   val config = ConfigFactory.load()
 
   // we set up spark
-  val sparkConfig = new SparkConf().setAppName("SparkAtGoldschmiede").setMaster("local[8]")
+  val sparkConfig = new SparkConf().setAppName("SparkAtGoldschmiede").setMaster("local[*]")
   val sparkContext = new SparkContext(sparkConfig)
   val sqlContext = new SQLContext(sparkContext)
 
